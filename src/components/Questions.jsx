@@ -6,16 +6,10 @@ import { Question } from './Question';
 
 
 
-
-
-
-
-
 export const Questions = () => {
 
 
     const [questions, setQuestions] = useState([]);
-
 
 
     useEffect(() => {
@@ -38,13 +32,6 @@ export const Questions = () => {
 
 
 
-
-
-
-
-
-
-
     return (
         <div className='w-full lg:w-7/12 '>
 
@@ -52,7 +39,6 @@ export const Questions = () => {
             <div className='px-10 mt-20 text-gray-500 text-xl font-semibold'>
                 Questions
             </div>
-
 
 
             <div className='px-10 mt-10 mb-5 flex space-x-5 text-gray-500'>
@@ -81,34 +67,20 @@ export const Questions = () => {
 
             <div className='p-4 w-full h-screen  overflow-y-auto'>
 
-
-
-                {/* map over here */}
-
+                {/* mapping over here */}
                 {
                     questions?.map((question, index) => (
 
-                        <>
-                            <Question key={index} question={question} />
+                        <div key={index}>
+                            <Question question={question} />
 
                             <hr />
-                        </>
-
-
+                        </div>
                     ))
                 }
 
 
-
             </div>
-
-
-
-
-
-
-
-
         </div>
     )
 }

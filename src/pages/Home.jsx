@@ -10,12 +10,9 @@ import { Rightbar } from '../components/Rightbar'
 export const Home = () => {
     return (
         <>
-
-
             <>
                 <Navbar/>
             </>
-
 
 
             {/* Section */}
@@ -36,16 +33,6 @@ export const Home = () => {
             <>
                 <Footer/>
             </>
-
-
-           
-
-
-
-
-            
-
-
 
 
         </>
