@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Rightbar = () => {
     return (
-        <div className='border-l p-5 w-3/12 h-full bg-gray-50'>
+        <div className='hidden lg:block  border-l p-5 w-3/12 h-full bg-gray-50'>
 
 
             <div className='mt-14 text-lg text-gray-500'>
@@ -159,29 +159,29 @@ export const Rightbar = () => {
                 <div className='text-[#0A95FF]'>
 
 
-                    <div className=''>
+                    <div className='cursor-pointer'>
 
-                        <p>
+                        <p className='my-2'>
                             Were there woman who were against giving women the right to vote?
                         </p>
                         <hr />
 
-                        <p>
+                        <p className='my-2'>
                             Why does everybody typedef over standard C types?
                         </p>
                         <hr />
 
-                        <p>
+                        <p className='my-2'>
                             An English word describing a pseudo-job
                         </p>
                         <hr />
 
-                        <p>
+                        <p className='my-2'>
                             When flying on a very tight schedule, are you obligated to run to make it to the next gate on a connection?
                         </p>
                         <hr />
 
-                        <p>
+                        <p className='my-2'>
                             Does 1 pixel have a standard size?
                         </p>
                         <hr />
@@ -189,7 +189,7 @@ export const Rightbar = () => {
                     </div>
 
 
-                    <p className='text-[#0A95FF]'>
+                    <p className='mt-8 text-[#383f44] cursor-pointer'>
                         VIEW ALL JOBS {">"}
                     </p>
 

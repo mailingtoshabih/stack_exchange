@@ -1,3 +1,4 @@
+import { Footer } from '../components/Footer'
 import { Leftbar } from '../components/Leftbar'
 import { Navbar } from '../components/Navbar'
 import { Questions } from '../components/Questions'
@@ -30,6 +31,11 @@ export const Home = () => {
 
 
             </div>
+
+
+            <>
+                <Footer/>
+            </>
 
 
            
