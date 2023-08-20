@@ -21,7 +21,7 @@ export const Question = ({ question }) => {
 
                 <div className='my-4 flex space-x-3'>
                     {
-                        question?.tags?.slice(0, 3).map((m, index) => (
+                        question?.tags?.slice(0, 2).map((m, index) => (
 
                             <p key={index}
                                 className='text-xs p-1 px-3 border rounded-full text-gray-600'>
@@ -60,7 +60,7 @@ export const Question = ({ question }) => {
 
 
 
-            <div className='my-auto w-4/12 flex justify-around text-center text-gray-500 text-sm'>
+            <div className='my-auto w-4/12 flex flex-wrap justify-around text-center text-gray-500 text-sm'>
 
                 <div className='w-1/3'>
 

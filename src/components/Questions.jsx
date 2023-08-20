@@ -36,24 +36,23 @@ export const Questions = () => {
         <div className='w-full lg:w-7/12 '>
 
 
-            <div className='px-10 mt-20 text-gray-500 text-xl font-semibold'>
+            <div className='px-3 md:px-10 mt-5 md:mt-20 text-gray-500 text-xl font-semibold'>
                 Questions
             </div>
 
 
-            <div className='px-10 mt-10 mb-5 flex space-x-5 text-gray-500'>
+            <div className='px-3 md:px-10 mt-10 mb-5 flex space-x-5 text-gray-500'>
 
                 <p className='p-1 px-4 bg-orange-500 text-white rounded-full'>
                     All</p>
 
-                <div className='mt-1 flex space-x-5'>
+                <div className='mt-1 flex space-x-3'>
                     <p className='cursor-pointer'>Featured</p>
 
                     <p className='cursor-pointer'>Hot</p>
 
                     <p className='cursor-pointer'>Weeks</p>
 
-                    <p className='cursor-pointer'>Months</p>
                 </div>
 
 
