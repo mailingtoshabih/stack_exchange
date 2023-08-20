@@ -1,11 +1,14 @@
+import { Leftbar } from '../components/Leftbar'
 import { Navbar } from '../components/Navbar'
+import { Questions } from '../components/Questions'
+import { Rightbar } from '../components/Rightbar'
 
 
 
 
 export const Home = () => {
     return (
-        <div className='bg-blue-50 rounded-b-2xl w-full h-60'>
+        <>
 
 
             <>
@@ -14,11 +17,31 @@ export const Home = () => {
 
 
 
+            {/* Section */}
+            <div className='flex'>
+
+                <Leftbar/>
+
+
+                <Questions/>
+
+
+                <Rightbar/>
+
+
+            </div>
+
+
+           
+
+
+
+
             
 
 
 
 
-        </div>
+        </>
     )
 }
