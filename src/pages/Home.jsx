@@ -20,12 +20,9 @@ export const Home = () => {
 
                 <Leftbar/>
 
-
                 <Questions/>
 
-
                 <Rightbar/>
-
 
             </div>
 

@@ -9,9 +9,9 @@ export default {
       fontFamily: {
         sans: [ "Fira Sans" ]
       }
-
     },
-
-    plugins: [],
-  }
+  },
+  plugins: [
+    require('tailwind-scrollbar-hide')
+  ],
 }

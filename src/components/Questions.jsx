@@ -6,6 +6,8 @@ import { Question } from './Question';
 
 
 
+
+
 export const Questions = () => {
 
 
@@ -20,21 +22,17 @@ export const Questions = () => {
         res && setQuestions(res.data.items);
     }
 
+
     const featured_tab = async () => {
         setQuestions("");
         const res = await axios.get("https://api.stackexchange.com/2.3/questions/featured?order=desc&sort=activity&filter=default&site=stackoverflow");
         res && setQuestions(res.data.items);
     }
 
-    const week_tab = async () => {
-        setQuestions("");
-        const res = await axios.get(`https://api.stackexchange.com/2.3/questions?fromdate=1692057600&order=desc&sort=activity&filter=default&site=stackoverflow`);
-        res && setQuestions(res.data.items);
-    }
 
-    const month_tab = async () => {
+    const filter = async (sort) => {
         setQuestions("");
-        const res = await axios.get("https://api.stackexchange.com/2.3/questions?fromdate=1689984000&order=desc&sort=activity&filter=default&site=stackoverflow");
+        const res = await axios.get(`https://api.stackexchange.com/2.3/questions?order=desc&sort=${sort}&filter=default&site=stackoverflow`);
         res && setQuestions(res.data.items);
     }
 
@@ -54,28 +52,27 @@ export const Questions = () => {
                         break;
 
                     case 3:
-                        featured_tab();
+                        filter("hot");
                         break;
 
                     case 4:
-                        week_tab();
+                        filter("week");
                         break;
 
                     case 5:
-                        month_tab();
+                        filter("month");
                         break;
 
                     default:
                         break;
                 }
-
             }
             catch (e) {
                 console.log(e.message);
             }
         }
 
-        // search();
+        search();
     }, [tab])
 
 
@@ -92,7 +89,7 @@ export const Questions = () => {
 
             {/* tab bar */}
 
-            <div className='px-3 md:px-5 mt-6 mb-5 flex space-x-5 text-gray-500 overflow-y-auto'>
+            <div className='px-3 md:px-5 mt-6 mb-5 flex space-x-5 text-gray-500 overflow-y-auto scrollbar-hide'>
 
                 <button className={`${tab === 1 ? "bg-orange-600 text-white" : "text-gray-500"} p-1 px-4 my-auto rounded-full`}
                     onClick={() => setTab(1)}>

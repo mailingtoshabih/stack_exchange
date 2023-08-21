@@ -4,9 +4,10 @@ import { Interaction } from './Interaction';
 export const Question = ({ question }) => {
 
 
-    let date = new Date(question?.creation_date);
-    date = date.toISOString().split('T')[0];
+    let date = new Date(question?.creation_date * 1000)
+    date = date.toLocaleString();
 
+   
 
     return (
 
@@ -16,16 +17,13 @@ export const Question = ({ question }) => {
 
             <div className='w-full md:w-8/12'>
 
-
                 <p className='my-1 text-lg text-[#0A95FF] capitalize'>
                     {question?.title}
                 </p>
 
-
                 <div className='my-4 flex space-x-3'>
                     {
-                        question?.tags?.slice(0, 2).map((m, index) => (
-
+                        question?.tags?.slice(0, 3).map((m, index) => (
                             <p key={index}
                                 className='text-xs p-1 px-3 border rounded-full text-gray-600'>
                                 {m}
@@ -44,9 +42,11 @@ export const Question = ({ question }) => {
                     </svg>
 
                     <div className='text-sm'>
-                        Answered on {date}
 
-                        <span className='font-semibold'>
+                        Answered on
+                        &nbsp;{date}
+
+                        <span className='font-semibold cursor-pointer' onClick={(() => location.reload)}>
                             &nbsp;{question?.owner?.display_name}
                         </span>
                     </div>
@@ -58,13 +58,11 @@ export const Question = ({ question }) => {
                 {/*Mobile Size : votes, views, answer */}
 
                 <div className='mt-4 block md:hidden w-full h-20'>
-                    <Interaction type={"v"} question={question}/>
+                    <Interaction type={"v"} question={question} />
                 </div>
 
 
             </div>
-
-
 
 
             <div className='hidden md:block w-4/12 my-auto'>

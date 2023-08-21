@@ -6,7 +6,7 @@ export const Footer = () => {
 
             <hr />
 
-            <div className='my-10 px-10 text-gray-500 text-sm flex flex-wrap space-x-5'>
+            <div className='my-10 px-3 md:px-16 text-gray-500 text-sm flex flex-wrap space-x-5'>
 
                 <p>About us</p>
                 <p>tour</p>
